@@ -15,8 +15,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
 <style>
   :root {
-    --navy: #1F3A5F; --navy2: #152a46; --orange: #E8731A; --orange2: #d56410;
-    --ink: #1c2530; --ink2: #55606e; --hairline: #e5e2db; --sand: #f7f5f1; --card: #ffffff;
+    --navy: #0B1F4A; --navy2: #123CBE; --blue: #1C4CCF; --orange: #F08A24; --orange2: #d97a14;
+    --ink: #1c2530; --ink2: #55606e; --hairline: #dce4f2; --sand: #f3f6fc; --card: #ffffff;
     --radius: 18px;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -39,7 +39,7 @@
   @media (min-width: 760px) { .nav-links { display: flex; } }
 
   /* ---------- hero ---------- */
-  .hero { background: linear-gradient(160deg, var(--navy) 0%, var(--navy2) 70%, #0f1f36 100%); color: #fff; padding: 44px 0 52px; position: relative; overflow: hidden; }
+  .hero { background: linear-gradient(160deg, var(--navy) 0%, var(--navy2) 62%, var(--blue) 100%); color: #fff; padding: 44px 0 52px; position: relative; overflow: hidden; }
   .hero::before { content: ''; position: absolute; inset-inline-end: -120px; top: -140px; width: 380px; height: 380px; border-radius: 50%; background: radial-gradient(circle, rgba(232,115,26,.28), transparent 65%); }
   .hero::after { content: ''; position: absolute; inset-inline-start: -100px; bottom: -160px; width: 320px; height: 320px; border-radius: 50%; background: radial-gradient(circle, rgba(255,255,255,.07), transparent 65%); }
   .hero-grid { display: grid; gap: 30px; position: relative; z-index: 1; }
@@ -82,13 +82,13 @@
   @media (min-width: 960px) { .feats { grid-template-columns: repeat(3, 1fr); } }
   .feat { background: var(--card); border: 1px solid var(--hairline); border-radius: var(--radius); padding: 20px; transition: transform .15s ease, box-shadow .15s ease; }
   .feat:hover { transform: translateY(-3px); box-shadow: 0 14px 34px rgba(21,42,70,.09); }
-  .feat .ic { width: 42px; height: 42px; border-radius: 12px; background: rgba(31,58,95,.08); color: var(--navy); display: flex; align-items: center; justify-content: center; margin-bottom: 12px; }
+  .feat .ic { width: 42px; height: 42px; border-radius: 12px; background: rgba(18,60,190,.08); color: var(--navy2); display: flex; align-items: center; justify-content: center; margin-bottom: 12px; }
   .feat .ic svg { width: 22px; height: 22px; }
   .feat b { display: block; font-size: 16.5px; font-weight: 800; color: var(--navy2); margin-bottom: 5px; }
   .feat span { color: var(--ink2); font-size: 14.5px; line-height: 1.75; display: block; }
 
   /* ---------- new strip ---------- */
-  .new { background: linear-gradient(135deg, #fff7ef, #fdf1e3); border: 1px solid #f3ddc4; border-radius: var(--radius); padding: 20px 22px; display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+  .new { background: linear-gradient(135deg, #eef3fd, #e7eefe); border: 1px solid #cfddf7; border-radius: var(--radius); padding: 20px 22px; display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
   .new .tag { background: var(--orange); color: #fff; font-weight: 800; font-size: 13px; border-radius: 999px; padding: 5px 14px; white-space: nowrap; }
   .new ul { list-style: none; display: flex; gap: 8px 18px; flex-wrap: wrap; }
   .new li { font-size: 14.5px; font-weight: 500; color: var(--ink); }
@@ -226,34 +226,49 @@
       <div class="feat">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12v18l-2-1.5L14 21l-2-1.5L10 21l-2-1.5L6 21z"/><path d="M9 8h6M9 12h6"/></svg></div>
         <b>قسيمة مرتب بالتأمينات والضريبة</b>
-        <span>قسيمة شهرية لكل موظف فيها المستحقات والاستقطاعات: تأمينات اجتماعية وضريبة مرتبات محسوبين على قانون العمل المصري، مع تكلفة صاحب العمل كاملة.</span>
+        <span>قسيمة شهرية لكل موظف فيها المستحقات والاستقطاعات: تأمينات اجتماعية وضريبة مرتبات محسوبين بشكل استرشادي على قانون العمل المصري، تراجعها مع محاسبك قبل الاعتماد.</span>
       </div>
       <div class="feat">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/><path d="M9 12l2 2 4-4"/></svg></div>
         <b>موارد بشرية على قانون العمل</b>
-        <span>7 أنواع إجازات بأرصدة وسجل لكل تعديل، سجل جزاءات تأديبية، عقود وتنبيهات انتهاء مستندات، حساب نهاية الخدمة، وصلاحية HR-admin بتتحدد لكل شخص.</span>
+        <span>7 أنواع إجازات بأرصدة وسجل لكل تعديل، سجل جزاءات تأديبية، عقود وتنبيهات انتهاء مستندات، وحسابات نظامية استرشادية تراجعها مع المختص، وصلاحية HR-admin بتتحدد لكل شخص.</span>
       </div>
       <div class="feat">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-8 8H5l-2 2V12a8 8 0 0 1 8-8h2a8 8 0 0 1 8 8z"/></svg></div>
-        <b>جروبات ورسايل ومساعد ذكي</b>
-        <span>جروبات للشركة كلها وشئون العاملين وكل موقع، وصندوق رسايل موظفين للمدير، ومساعد ذكي بيرد على سؤال الموظف عن رصيده وخصوماته ومرتبه في ثواني.</span>
+        <b>جروبات ورسايل الموظفين</b>
+        <span>جروبات للشركة كلها وشئون العاملين وكل موقع، وصندوق رسايل موظفين للمدير يرد منه على أي استفسار، فالتواصل كله جوه التطبيق.</span>
+      </div>
+      <div class="feat">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.7 4.6L18 9.2l-4.3 1.6L12 15.5l-1.7-4.7L6 9.2l4.3-1.6z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/></svg></div>
+        <b>مساعد حضوري الذكي</b>
+        <span>مساعد بالذكاء الاصطناعي بيرد على سؤال الموظف عن رصيد إجازاته وخصوماته ومرتبه في ثواني، وبيساعد المدير في المتابعة اليومية.</span>
       </div>
       <div class="feat">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 4 5.7 4 9s-1.5 6.5-4 9c-2.5-2.5-4-5.7-4-9s1.5-6.5 4-9z"/></svg></div>
         <b>عربي وإنجليزي بالكامل</b>
         <span>كل شاشة شغالة باللغتين، والاتجاه والخطوط بيتظبطوا حسب اللغة المختارة، فالموظف والمدير كل واحد يشتغل باللغة اللي مرتاح بيها.</span>
       </div>
+      <div class="feat">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 19c.6-3 2.8-4.5 5.5-4.5s4.9 1.5 5.5 4.5"/><circle cx="17" cy="9.5" r="2.4"/><path d="M15.5 14.6c2.5.1 4.3 1.5 4.9 4"/></svg></div>
+        <b>شركاء بصلاحيات مضبوطة</b>
+        <span>ضيف شريك في الإدارة بكود انضمام بيشتغل مرة واحدة، يشوف الحضور والموظفين والأجور بصلاحيات المالك، واسمه ودوره ظاهرين فوق، وسحب الصلاحية بضغطة في أي وقت.</span>
+      </div>
+      <div class="feat">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/><circle cx="12" cy="15" r="1.6"/></svg></div>
+        <b>قفل التطبيق بالبصمة</b>
+        <span>قفل إضافي ببصمة الموبايل عند فتح التطبيق، فبيانات شركتك ومرتبات موظفينك محدش يفتحها غيرك.</span>
+      </div>
     </div>
 
     <div class="new" style="margin-top:16px">
       <span class="tag">وصل حديثًا</span>
       <ul>
+        <li>الشركاء بكود انضمام</li>
         <li>المساعد الذكي</li>
         <li>جروبات الشركة والمواقع</li>
-        <li>رسايل الموظفين للمدير</li>
+        <li>قفل التطبيق بالبصمة</li>
+        <li>الواجهة الزرقاء الجديدة</li>
         <li>الإنجليزية الكاملة</li>
-        <li>أفاتار لكل موظف</li>
-        <li>أيقونة التطبيق الجديدة</li>
       </ul>
     </div>
   </div>
@@ -269,14 +284,14 @@
     <div class="gallery">
       <figure class="shot"><div class="frame"><img src="g1-dashboard.webp" alt="لوحة حضوري الرئيسية وفيها ملخص الحضور واسم المالك والشريك" loading="lazy"></div><figcaption>الرئيسية: يومك في صورة</figcaption></figure>
       <figure class="shot"><div class="frame"><img src="g2-assistant.webp" alt="المساعد الذكي في حضوري بيرد على أسئلة الموظف عن رصيد الإجازات والخصومات" loading="lazy"></div><figcaption>المساعد الذكي بيرد في ثواني</figcaption></figure>
-      <figure class="shot"><div class="frame"><img src="g3-groups.webp" alt="جروبات حضوري: الشركة كلها وشئون العاملين وموقع برج السلام" loading="lazy"></div><figcaption>جروبات للشركة والمواقع</figcaption></figure>
-      <figure class="shot"><div class="frame"><img src="g4-inbox.webp" alt="صندوق رسايل الموظفين عند المدير في حضوري" loading="lazy"></div><figcaption>رسايل الموظفين عند المدير</figcaption></figure>
-      <figure class="shot"><div class="frame"><img src="g5-punch.webp" alt="شاشة بصمة الموظف في حضوري بالوقت وزر التسجيل" loading="lazy"></div><figcaption>بصمة الموظف بضغطة واحدة</figcaption></figure>
-      <figure class="shot"><div class="frame"><img src="g6-punchlist.webp" alt="سجل البصمات في حضوري وكل تسجيلة ومعاها سيلفي الموظف" loading="lazy"></div><figcaption>سجل البصمات بالسيلفي</figcaption></figure>
+      <figure class="shot"><div class="frame"><img src="g3-rooms.webp" alt="جروبات حضوري: الشركة كلها وشئون العاملين وموقع برج السلام" loading="lazy"></div><figcaption>جروبات للشركة والمواقع</figcaption></figure>
+      <figure class="shot"><div class="frame"><img src="g4-roomchat.webp" alt="جروب شئون العاملين في حضوري ومحادثة بين موظف والإدارة" loading="lazy"></div><figcaption>جروب شئون العاملين شغال</figcaption></figure>
+      <figure class="shot"><div class="frame"><img src="g5-requests.webp" alt="شاشة الطلبات في حضوري: إضافي وإجازة وعمل من المنزل بموافقة أو رفض بضغطة" loading="lazy"></div><figcaption>الطلبات: وافق أو ارفض بضغطة</figcaption></figure>
+      <figure class="shot"><div class="frame"><img src="g6-employees.webp" alt="قائمة الموظفين في حضوري بالأجور اليومية والأفاتار الجديدة" loading="lazy"></div><figcaption>الموظفين وأجورهم اليومية</figcaption></figure>
       <figure class="shot"><div class="frame"><img src="g7-payslip.webp" alt="قسيمة المرتب الشهرية في حضوري وفيها التأمينات الاجتماعية وضريبة المرتبات وصافي المرتب" loading="lazy"></div><figcaption>قسيمة المرتب بالتأمينات والضريبة</figcaption></figure>
       <figure class="shot"><div class="frame"><img src="g8-hrhub.webp" alt="بوابة الموارد البشرية في حضوري على قانون العمل المصري" loading="lazy"></div><figcaption>الموارد البشرية وقانون العمل</figcaption></figure>
-      <figure class="shot"><div class="frame"><img src="g9-empfile.webp" alt="ملف الموظف في حضوري وفيه رصيد الإجازات وسجل الحضور" loading="lazy"></div><figcaption>ملف كل موظف كامل</figcaption></figure>
-      <figure class="shot"><div class="frame"><img src="g10-language.webp" alt="إعدادات اللغة في حضوري عربي وإنجليزي" loading="lazy"></div><figcaption>عربي وإنجليزي بضغطة</figcaption></figure>
+      <figure class="shot"><div class="frame"><img src="g9-payroll.webp" alt="التسوية الأسبوعية للأجور في حضوري بالإضافي والسلف والجزاءات والصافي" loading="lazy"></div><figcaption>التسوية الأسبوعية للأجور</figcaption></figure>
+      <figure class="shot"><div class="frame"><img src="g10-more.webp" alt="شاشة المزيد في حضوري: اللغة عربي وإنجليزي والشركة والسحابة والجروبات" loading="lazy"></div><figcaption>اللغة والإعدادات والشركاء</figcaption></figure>
     </div>
     <p class="gal-hint">اسحب عشان تشوف باقي الشاشات ←</p>
   </div>
@@ -306,7 +321,7 @@
       <h2>تبدأ إزاي؟</h2>
     </div>
     <div class="steps">
-      <div class="step"><div class="n">1</div><b>اطلب عرضًا تجريبيًا</b><span>رسالة واتساب واحدة، ونرتبلك تجربة على موبايلك ببيانات شركتك.</span></div>
+      <div class="step"><div class="n">1</div><b>اطلب عرضًا تجريبيًا</b><span>رسالة واتساب واحدة، ونجهزلك عرض تجريبي ببيانات افتراضية تشوف بيه كل المميزات شغالة.</span></div>
       <div class="step"><div class="n">2</div><b>سجّل شركتك وموظفينك</b><span>التسجيل والإعداد بيتموا أونلاين في نفس اليوم، من غير أي زيارات أو تركيب.</span></div>
       <div class="step"><div class="n">3</div><b>ابدأ المتابعة</b><span>الحضور والتأخير والمرتبات والطلبات قدامك لحظة بلحظة، لكل مواقعك.</span></div>
     </div>
@@ -318,9 +333,10 @@
   <div class="wrap">
     <div class="final">
       <h2>اطلب عرضك التجريبي دلوقتي</h2>
-      <p>ابعتلنا على واتساب وهنرد عليك ونجهزلك تجربة كاملة على موبايلك.</p>
+      <p>ابعتلنا على واتساب وهنرد عليك ونجهزلك عرض تجريبي ببيانات افتراضية.</p>
       <div class="row">
         <a class="btn btn-navy" href="https://wa.me/201003381110?text=%D8%A3%D9%86%D8%A7%20%D9%85%D9%87%D8%AA%D9%85%20%D8%A8%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%20%D8%AD%D8%B6%D9%88%D8%B1%D9%8A%20%D9%84%D8%A5%D8%AF%D8%A7%D8%B1%D8%A9%20%D8%A7%D9%84%D8%AD%D8%B6%D9%88%D8%B1%20%D9%88%D8%A7%D9%84%D9%85%D8%B1%D8%AA%D8%A8%D8%A7%D8%AA%D8%8C%20%D9%85%D9%85%D9%83%D9%86%20%D9%86%D8%AA%D9%83%D9%84%D9%85%20%D8%B9%D9%86%20%D8%B9%D8%B1%D8%B6%20%D8%AA%D8%AC%D8%B1%D9%8A%D8%A8%D9%8A%D8%9F" target="_blank" rel="noopener">كلمنا على واتساب</a>
+        <a class="btn btn-line" href="https://github.com/zekom4167-hue/hodory/releases/download/v0.9.11-debug/Hodory-v0.9.11-debug.apk">حمّل التطبيق (Android)</a>
         <button class="btn btn-line" id="copyBtn" onclick="copyNumber()">انسخ الرقم</button>
       </div>
       <p style="margin-top:14px;font-size:14px">واتساب: <span class="phone-line">+20 100 338 1110</span></p>
@@ -330,7 +346,7 @@
 
 <footer>
   <div class="wrap">
-    الأسعار والمميزات دي المتاحة في نوفمبر 2026، وبعضها بيتطور مع كل نسخة جديدة.
+    الأسعار والمميزات دي المتاحة في نوفمبر 2026، وبعضها بيتطور مع كل نسخة جديدة. حسابات المرتبات والتأمينات والضرائب والبنود النظامية في التطبيق استرشادية وبتتراجع مع محاسبك أو مستشارك القانوني، وبيانات كل شركة متفصلة عن غيرها جوه التطبيق.
     <div class="owner">حضوري تكنولوجي — ملكية وتطوير محمد ماجد</div>
   </div>
 </footer>
