@@ -1,287 +1,352 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>حضوري: حضور ومرتبات شركتك في تطبيق واحد</title>
-<meta name="description" content="كل موظف بيبصم حضور من موبايله بالـ GPS وسيلفي، وانت بتتابع كل مواقعك وبتطلع المرتبات من تطبيق واحد. 80 جنيه للموظف في الشهر.">
-<meta property="og:title" content="حضوري: حضور ومرتبات شركتك في تطبيق واحد">
-<meta property="og:description" content="كل موظف بيبصم حضور من موبايله بالـ GPS وسيلفي، وانت بتتابع كل مواقعك وبتطلع المرتبات من تطبيق واحد.">
+<title>حضوري: نظام الحضور والمرتبات والموارد البشرية لمواقع العمل</title>
+<meta name="description" content="كل موظف بيبصم حضور من موبايله بالـ GPS وسيلفي، والمرتبات والإجازات بتتحسب على قانون العمل المصري، وانت بتتابع كل مواقعك من تطبيق واحد. عربي وإنجليزي. 80 جنيه للموظف في الشهر.">
+<meta property="og:title" content="حضوري: نظام الحضور والمرتبات والموارد البشرية لمواقع العمل">
+<meta property="og:description" content="بصمة GPS وسيلفي، مرتبات وتسويات، قسيمة مرتب بالتأمينات والضريبة، وموارد بشرية على قانون العمل المصري. عربي وإنجليزي.">
 <meta property="og:image" content="https://zekom4167-hue.github.io/hodory/hero.webp">
 <meta property="og:type" content="website">
-<meta name="theme-color" content="#1F3A5F">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231F3A5F'/%3E%3Cpath d='M18 33l10 10 18-22' stroke='%23E8731A' stroke-width='7' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="icon" href="app-icon.webp" type="image/webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
 <style>
   :root {
-    --ink: #251f21;
-    --ink2: #585254;
-    --hairline: #eae9ea;
-    --sand: #f4efec;
-    --teal: #4a8572;
-    --navy: #1F3A5F;
-    --orange: #E8731A;
+    --navy: #1F3A5F; --navy2: #152a46; --orange: #E8731A; --orange2: #d56410;
+    --ink: #1c2530; --ink2: #55606e; --hairline: #e5e2db; --sand: #f7f5f1; --card: #ffffff;
+    --radius: 18px;
   }
-  * { box-sizing: border-box; }
-  html, body { margin: 0; }
-  body {
-    background: var(--sand);
-    color: var(--ink);
-    font-family: 'Tajawal', 'Segoe UI', Tahoma, Arial, sans-serif;
-    font-size: 15px;
-    line-height: 1.75;
-    -webkit-font-smoothing: antialiased;
-  }
-  .page {
-    max-width: 680px;
-    margin: 0 auto;
-    background: #fff;
-    padding: 40px 22px 32px;
-    min-height: 100vh;
-  }
-  @media (min-width: 768px) {
-    body { padding: 32px 0; }
-    .page { border-radius: 24px; padding: 56px 44px 40px; box-shadow: 0 2px 24px rgba(37,31,33,.06); min-height: 0; }
-  }
-  h1 {
-    font-size: 27px;
-    font-weight: 800;
-    line-height: 1.35;
-    margin: 0 0 10px;
-  }
-  @media (min-width: 768px) { h1 { font-size: 34px; } }
-  .price-fact {
-    color: var(--teal);
-    font-weight: 700;
-    margin: 0 0 14px;
-  }
-  .intro { margin: 0 0 24px; }
-  .hero { margin: 0 0 6px; }
-  .hero img { width: 100%; height: auto; border-radius: 20px; display: block; }
-  .caption { color: var(--ink2); font-size: 12.5px; margin: 6px 0 0; }
-  h2 {
-    font-size: 20px;
-    font-weight: 800;
-    margin: 36px 0 12px;
-    padding-top: 28px;
-    border-top: 1px solid var(--hairline);
-  }
-  .group:first-of-type h2 { border-top: 0; padding-top: 0; }
-  .key-sentence {
-    font-weight: 700;
-    border-right: 3px solid var(--orange);
-    padding-right: 12px;
-    margin: 0 0 12px;
-  }
-  p.body { margin: 0 0 8px; }
-  ul.pains {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  ul.pains li {
-    padding: 12px 0;
-    border-bottom: 1px solid var(--hairline);
-    display: flex;
-    gap: 12px;
-    align-items: baseline;
-  }
-  ul.pains li:last-child { border-bottom: 0; }
-  ul.pains li::before { content: "×"; color: var(--orange); font-weight: 800; font-size: 18px; line-height: 1; }
-  ol.features {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    counter-reset: feat;
-  }
-  ol.features li {
-    counter-increment: feat;
-    padding: 14px 0;
-    border-bottom: 1px solid var(--hairline);
-    display: flex;
-    gap: 14px;
-    align-items: baseline;
-  }
-  ol.features li:last-child { border-bottom: 0; }
-  ol.features li::before {
-    content: counter(feat) ".";
-    color: var(--ink2);
-    font-weight: 500;
-    min-width: 22px;
-    text-align: left;
-  }
-  .feat-name { font-weight: 700; display: block; }
-  .feat-detail { color: var(--ink2); }
-  .shots {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
-  }
-  @media (min-width: 768px) { .shots { grid-template-columns: repeat(3, 1fr); } }
-  .shots img {
-    width: 100%;
-    height: auto;
-    border-radius: 14px;
-    border: 1px solid var(--hairline);
-    display: block;
-    background: var(--sand);
-  }
-  dl.facts { margin: 0; }
-  .fact-row {
-    display: flex;
-    justify-content: space-between;
-    gap: 16px;
-    padding: 12px 0;
-    border-bottom: 1px solid var(--hairline);
-  }
-  .fact-row:last-child { border-bottom: 0; }
-  .fact-row dt { color: var(--ink2); }
-  .fact-row dd { margin: 0; font-weight: 700; text-align: left; }
-  .callout {
-    background: var(--sand);
-    border-radius: 12px;
-    padding: 14px 16px;
-    margin-top: 16px;
-  }
-  .callout strong { display: block; margin-bottom: 2px; }
-  .cta-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-top: 16px;
-  }
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    border-radius: 999px;
-    padding: 12px 22px;
-    font-weight: 700;
-    font-size: 15px;
-    text-decoration: none;
-    border: 1px solid var(--hairline);
-    cursor: pointer;
-    font-family: inherit;
-    min-height: 48px;
-  }
-  .btn-primary { background: var(--navy); color: #fff; border-color: var(--navy); }
-  .btn-primary:hover { background: #182c49; }
-  .btn-ghost { background: #fff; color: var(--ink); }
-  .btn-ghost:hover { background: var(--sand); }
-  .phone-line { direction: ltr; text-align: right; unicode-bidi: embed; }
-  footer {
-    margin-top: 36px;
-    padding-top: 20px;
-    border-top: 1px solid var(--hairline);
-    color: var(--ink2);
-    font-size: 13px;
-  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Tajawal', system-ui, 'Segoe UI', sans-serif; background: var(--sand); color: var(--ink); line-height: 1.7; }
+  img, video { max-width: 100%; }
+  a { color: var(--navy); }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 18px; }
+
+  /* ---------- top nav ---------- */
+  .nav { position: sticky; top: 0; z-index: 50; backdrop-filter: blur(12px); background: rgba(247,245,241,.85); border-bottom: 1px solid var(--hairline); }
+  .nav-in { display: flex; align-items: center; gap: 14px; padding: 10px 0; }
+  .nav-brand { display: flex; align-items: center; gap: 9px; text-decoration: none; color: var(--ink); font-weight: 800; font-size: 17px; }
+  .nav-brand img { width: 30px; height: 30px; border-radius: 8px; }
+  .nav-links { display: none; gap: 18px; margin-inline-start: 12px; }
+  .nav-links a { text-decoration: none; color: var(--ink2); font-size: 14px; font-weight: 500; }
+  .nav-links a:hover { color: var(--navy); }
+  .nav-cta { margin-inline-start: auto; background: var(--orange); color: #fff !important; text-decoration: none; font-weight: 700; font-size: 14px; border-radius: 999px; padding: 8px 16px; white-space: nowrap; }
+  .nav-cta:hover { background: var(--orange2); }
+  @media (min-width: 760px) { .nav-links { display: flex; } }
+
+  /* ---------- hero ---------- */
+  .hero { background: linear-gradient(160deg, var(--navy) 0%, var(--navy2) 70%, #0f1f36 100%); color: #fff; padding: 44px 0 52px; position: relative; overflow: hidden; }
+  .hero::before { content: ''; position: absolute; inset-inline-end: -120px; top: -140px; width: 380px; height: 380px; border-radius: 50%; background: radial-gradient(circle, rgba(232,115,26,.28), transparent 65%); }
+  .hero::after { content: ''; position: absolute; inset-inline-start: -100px; bottom: -160px; width: 320px; height: 320px; border-radius: 50%; background: radial-gradient(circle, rgba(255,255,255,.07), transparent 65%); }
+  .hero-grid { display: grid; gap: 30px; position: relative; z-index: 1; }
+  @media (min-width: 880px) { .hero-grid { grid-template-columns: 1.05fr .95fr; align-items: center; } }
+  .eyebrow { display: inline-block; font-size: 13px; font-weight: 700; color: #ffc799; background: rgba(232,115,26,.14); border: 1px solid rgba(232,115,26,.35); border-radius: 999px; padding: 4px 14px; margin-bottom: 16px; }
+  .hero h1 { font-size: 30px; font-weight: 800; line-height: 1.5; margin-bottom: 14px; }
+  @media (min-width: 760px) { .hero h1 { font-size: 40px; } }
+  .hero .sub { color: #c9d6e8; font-size: 16px; max-width: 56ch; margin-bottom: 22px; }
+  .hero-ctas { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 18px; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; border-radius: 999px; padding: 13px 24px; font-weight: 700; font-size: 15px; text-decoration: none; border: 1.5px solid transparent; cursor: pointer; font-family: inherit; min-height: 50px; }
+  .btn-primary { background: var(--orange); color: #fff; }
+  .btn-primary:hover { background: var(--orange2); }
+  .btn-ghost { background: rgba(255,255,255,.08); color: #fff; border-color: rgba(255,255,255,.35); }
+  .btn-ghost:hover { background: rgba(255,255,255,.16); }
+  .hero-chips { display: flex; gap: 8px; flex-wrap: wrap; }
+  .chip { font-size: 12.5px; font-weight: 500; color: #dbe4f0; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.16); border-radius: 999px; padding: 5px 13px; }
+  .chip b { color: #ffc799; font-weight: 700; }
+  .hero-media { position: relative; }
+  .video-frame { background: #0d1c30; border: 1px solid rgba(255,255,255,.14); border-radius: 24px; padding: 10px; box-shadow: 0 24px 60px rgba(0,0,0,.45); }
+  .video-frame video { width: 100%; border-radius: 16px; display: block; }
+  .video-cap { text-align: center; color: #b9c6d8; font-size: 13px; margin-top: 10px; }
+
+  /* ---------- industries strip ---------- */
+  .strip { background: var(--navy2); border-top: 1px solid rgba(255,255,255,.08); padding: 14px 0; }
+  .strip-in { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; align-items: center; color: #b9c6d8; font-size: 13.5px; }
+  .strip b { color: #fff; font-weight: 700; }
+  .strip .dot { color: var(--orange); }
+
+  /* ---------- sections ---------- */
+  section { padding: 52px 0; }
+  .sec-head { max-width: 640px; margin-bottom: 28px; }
+  .sec-eyebrow { color: var(--orange); font-weight: 700; font-size: 13.5px; margin-bottom: 6px; }
+  .sec-head h2 { font-size: 25px; font-weight: 800; color: var(--navy); line-height: 1.5; }
+  @media (min-width: 760px) { .sec-head h2 { font-size: 30px; } }
+  .sec-head p { color: var(--ink2); margin-top: 6px; font-size: 15.5px; }
+
+  /* ---------- feature grid ---------- */
+  .feats { display: grid; gap: 12px; }
+  @media (min-width: 640px) { .feats { grid-template-columns: 1fr 1fr; } }
+  @media (min-width: 960px) { .feats { grid-template-columns: repeat(3, 1fr); } }
+  .feat { background: var(--card); border: 1px solid var(--hairline); border-radius: var(--radius); padding: 20px; transition: transform .15s ease, box-shadow .15s ease; }
+  .feat:hover { transform: translateY(-3px); box-shadow: 0 14px 34px rgba(21,42,70,.09); }
+  .feat .ic { width: 42px; height: 42px; border-radius: 12px; background: rgba(31,58,95,.08); color: var(--navy); display: flex; align-items: center; justify-content: center; margin-bottom: 12px; }
+  .feat .ic svg { width: 22px; height: 22px; }
+  .feat b { display: block; font-size: 16.5px; font-weight: 800; color: var(--navy2); margin-bottom: 5px; }
+  .feat span { color: var(--ink2); font-size: 14.5px; line-height: 1.75; display: block; }
+
+  /* ---------- new strip ---------- */
+  .new { background: linear-gradient(135deg, #fff7ef, #fdf1e3); border: 1px solid #f3ddc4; border-radius: var(--radius); padding: 20px 22px; display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+  .new .tag { background: var(--orange); color: #fff; font-weight: 800; font-size: 13px; border-radius: 999px; padding: 5px 14px; white-space: nowrap; }
+  .new ul { list-style: none; display: flex; gap: 8px 18px; flex-wrap: wrap; }
+  .new li { font-size: 14.5px; font-weight: 500; color: var(--ink); }
+  .new li::before { content: '✦ '; color: var(--orange); }
+
+  /* ---------- gallery ---------- */
+  .gallery { display: flex; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 4px 2px 16px; -webkit-overflow-scrolling: touch; }
+  .gallery::-webkit-scrollbar { height: 6px; }
+  .gallery::-webkit-scrollbar-thumb { background: #cfc9bd; border-radius: 3px; }
+  .shot { flex: 0 0 200px; scroll-snap-align: start; }
+  .shot .frame { border-radius: 20px; overflow: hidden; border: 1px solid var(--hairline); box-shadow: 0 10px 28px rgba(21,42,70,.10); background: #fff; }
+  .shot img { display: block; width: 100%; height: auto; }
+  .shot figcaption { text-align: center; font-size: 13px; color: var(--ink2); margin-top: 8px; font-weight: 500; }
+  @media (min-width: 760px) { .shot { flex-basis: 220px; } }
+  .gal-hint { text-align: center; color: var(--ink2); font-size: 12.5px; margin-top: -4px; }
+
+  /* ---------- pricing ---------- */
+  .pricing { background: linear-gradient(135deg, var(--navy), var(--navy2)); border-radius: 26px; color: #fff; padding: 34px 28px; display: grid; gap: 24px; position: relative; overflow: hidden; }
+  .pricing::after { content: ''; position: absolute; inset-inline-start: -60px; bottom: -90px; width: 260px; height: 260px; border-radius: 50%; background: radial-gradient(circle, rgba(232,115,26,.25), transparent 65%); }
+  @media (min-width: 820px) { .pricing { grid-template-columns: auto 1fr auto; align-items: center; padding: 40px 44px; } }
+  .price-num { font-size: 44px; font-weight: 800; line-height: 1.2; }
+  .price-num small { display: block; font-size: 15px; font-weight: 500; color: #b9c6d8; }
+  .price-points { list-style: none; display: grid; gap: 8px; position: relative; z-index: 1; }
+  .price-points li { color: #dbe4f0; font-size: 15px; }
+  .price-points li::before { content: '✓ '; color: var(--orange); font-weight: 800; }
+  .price-cta { position: relative; z-index: 1; }
+
+  /* ---------- steps ---------- */
+  .steps { display: grid; gap: 12px; }
+  @media (min-width: 760px) { .steps { grid-template-columns: repeat(3, 1fr); } }
+  .step { background: var(--card); border: 1px solid var(--hairline); border-radius: var(--radius); padding: 20px; }
+  .step .n { width: 30px; height: 30px; border-radius: 50%; background: var(--navy); color: #fff; font-weight: 800; display: flex; align-items: center; justify-content: center; margin-bottom: 10px; }
+  .step b { display: block; color: var(--navy2); font-size: 16px; font-weight: 800; margin-bottom: 4px; }
+  .step span { color: var(--ink2); font-size: 14.5px; }
+
+  /* ---------- final CTA ---------- */
+  .final { background: var(--card); border: 1px solid var(--hairline); border-radius: 26px; padding: 40px 24px; text-align: center; }
+  .final h2 { color: var(--navy); font-size: 24px; font-weight: 800; margin-bottom: 8px; }
+  .final p { color: var(--ink2); margin-bottom: 20px; }
+  .final .row { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+  .btn-navy { background: var(--navy); color: #fff; }
+  .btn-navy:hover { background: var(--navy2); }
+  .btn-line { background: #fff; color: var(--navy); border-color: var(--hairline); }
+  .btn-line:hover { background: var(--sand); }
+  .phone-line { direction: ltr; unicode-bidi: embed; }
+  .soon { text-align: center; color: var(--ink2); font-size: 13px; margin-top: 14px; }
+  .soon b { color: var(--navy); }
+
+  footer { padding: 26px 0 34px; color: var(--ink2); font-size: 13.5px; text-align: center; }
+  footer .owner { color: var(--navy); font-weight: 700; margin-top: 4px; }
 </style>
 </head>
 <body>
-<div class="page">
 
-  <header>
-    <h1>حضوري: نظام الحضور والمرتبات اللي مواقعك محتاجاه</h1>
-    <p class="price-fact">80 جنيه للموظف في الشهر</p>
-    <p class="intro">كل موظف بيبصم حضور من موبايله بالـ GPS وسيلفي، وانت بتتابع كل مواقعك لحظة بلحظة وبتطلع المرتبات من تطبيق واحد. عربي بالكامل، وبتشتغل بيه في دقايق من موبايلات موظفينك من غير أي أجهزة إضافية.</p>
-  </header>
-
-  <figure class="hero">
-    <video src="hodory-promo.mp4" poster="hero.webp" controls playsinline preload="metadata" style="width:100%;border-radius:20px;display:block"></video>
-    <figcaption class="caption">شوف حضوري شغال: دقيقة واحدة تشرح كل حاجة، من كود الموظف لحد كشف المرتب.</figcaption>
-  </figure>
-
-  <section class="group">
-    <h2>عارف يوم أول الشهر؟</h2>
-    <ul class="pains">
-      <li><span>كشف حضور ورقي بيتملى من الذاكرة آخر الشهر، ومين يثبت مين؟</span></li>
-      <li><span>خناق مرتبات على واتساب: كل موظف بيقول اتخصمت غلط، ومفيش مستند يفصل.</span></li>
-      <li><span>ثلاث مواقع شغالين، ومين حاضر فين دلوقتي؟ مش هتعرف غير بتليفون لكل مسئول.</span></li>
-    </ul>
-    <p class="key-sentence">حضوري بيقفل الدواير دي كلها: تسجيل حضور من الموبايل بموقع مؤكد وسيلفي، وكشف مرتب موثق لكل موظف، وكل مواقعك قدامك في شاشة واحدة.</p>
-  </section>
-
-  <section class="group">
-    <h2>اتعمل لشغل المواقع، مش للمكاتب</h2>
-    <p class="body">حضوري متصمم من الأول للشركات اللي شغالة بعمالة مواقع ويوميات: مقاولات، أمن وحراسة، مصانع، وتشغيل وصيانة. التسجيل والإعداد بيتموا أونلاين في نفس اليوم: بتسجل شركتك وبتضيف موظفينك وبتبدأ على طول، والسعر معلن وواضح من دلوقتي.</p>
-  </section>
-
-  <section class="group">
-    <h2>كل اللي محتاجه في يوم الشغل</h2>
-    <ol class="features">
-      <li><span><span class="feat-name">الحضور بالـ GPS والسيلفي</span><span class="feat-detail">كل موظف بيبصم حضور وانصراف من موبايله وهو داخل نطاق الموقع اللي انت محدده، وصورة سيلفي مع كل تسجيل يراجعها المدير. مفيش "وصلت يا باشا" من البيت.</span></span></li>
-      <li><span><span class="feat-name">كود لكل موظف وجهاز معتمد</span><span class="feat-detail">كل موظف بيدخل بكوده الشخصي على موبايله، وانت اللي بتوافق على الجهاز قبل أول تسجيل، فمفيش بصمة من جهاز غريب.</span></span></li>
-      <li><span><span class="feat-name">الطلبات والموافقات</span><span class="feat-detail">إجازات (سنوية وعارضة ومرضية وبدون أجر) ومأموريات وأذونات وساعات إضافية، وانت بتوافق أو ترفض من موبايلك بضغطة، ورصيد إجازات كل موظف بيتحسب أوتوماتيك.</span></span></li>
-      <li><span><span class="feat-name">الشيفتات وخصم التأخير الأوتوماتيك</span><span class="feat-detail">حدد شيفت لكل موقع بوقت حضور وانصراف وسماحية تأخير، والتأخير بيتسجل وبيتخصم لوحده من غير ما تراجع حاجة.</span></span></li>
-      <li><span><span class="feat-name">الخصومات والجزاءات والسلف</span><span class="feat-detail">سجلها على حساب الموظف أول بأول، وهي بتظهر لوحدها في كشف مرتبه آخر الشهر، بالورقة والمستند اللي يقفل أي نقاش.</span></span></li>
-      <li><span><span class="feat-name">التسوية الأسبوعية والمرتبات الشهرية</span><span class="feat-detail">كشوف مرتبات جاهزة لكل موقع، شغل يومية أو شهري، بتتصدّر PDF و Excel وتتطبع على طول.</span></span></li>
-      <li><span><span class="feat-name">ملف كامل لكل موظف</span><span class="feat-detail">بياناته وعقده ومستنداته ورصيد إجازاته وسجل حضوره يوم بيوم ودقايق تأخيره، كل ده في صفحة واحدة، مع تنبيه قبل ما أي مستند يخلص ميعاده.</span></span></li>
-      <li><span><span class="feat-name">مزامنة سحابية للبصمات والطلبات</span><span class="feat-detail">البصمات والطلبات بتتزامن على السحابة أول بأول، فلو موبايلك ضاع أو اتغير بتلاقيها زي ما هي. إعدادات الموارد البشرية (أرصدة الإجازات وتعديلاتها والشيفتات) محفوظة على موبايل المدير.</span></span></li>
-      <li><span><span class="feat-name">قفل التطبيق</span><span class="feat-detail">حضوري على موبايلك مقفول، محدش يفتحه غيرك.</span></span></li>
-    </ol>
-  </section>
-
-  <section class="group">
-    <h2>شوف التطبيق بعينك</h2>
-    <div class="shots" id="shots">
-      <img src="shot-1-codegate.webp" alt="شاشة دخول الموظف في حضوري بكوده الشخصي" loading="lazy">
-      <img src="shot-2-punch.webp" alt="شاشة تسجيل الحضور والانصراف في حضوري: زر تسجيل كبير مع حالة حضور الموظف النهارده" loading="lazy">
-      <img src="shot-3-punchlist.webp" alt="سجل البصمات في حضوري: كل تسجيلة ومعاها سيلفي الموظف ووقت البصمة" loading="lazy">
-      <img src="shot-4-hr.webp" alt="بوابة الموارد البشرية في حضوري: الإجازات والجزاءات والعقود ونهاية الخدمة في مكان واحد" loading="lazy">
-      <img src="shot-5-shift.webp" alt="إعدادات الموقع في حضوري: نطاق الـ GPS وبداية الشيفت ونهايته وسماحية التأخير" loading="lazy">
-      <img src="shot-6-dashboard.webp" alt="شاشة تسجيل الحضور اليومي في تطبيق حضوري: ملخص الحاضرين والغائبين وكروت الموظفين" loading="lazy">
-      <img src="shot-7-requests.webp" alt="شاشة الطلبات في حضوري: طلبات إجازة ومأمورية مع أزرار موافقة ورفض" loading="lazy">
-      <img src="shot-8-hrfile.webp" alt="ملف الموظف الكامل في حضوري: إجمالي الشهر ورصيد الإجازات وسجل الحضور يوم بيوم" loading="lazy">
-      <img src="shot-9-payroll.webp" alt="شاشة كشف المرتبات الشهري في حضوري: صافي مرتب كل موظف مع الأيام والساعات الإضافية والسلف" loading="lazy">
+<nav class="nav">
+  <div class="wrap nav-in">
+    <a class="nav-brand" href="#top"><img src="app-icon.webp" alt="أيقونة تطبيق حضوري"> حضوري</a>
+    <div class="nav-links">
+      <a href="#features">المميزات</a>
+      <a href="#gallery">التطبيق بالصور</a>
+      <a href="#pricing">السعر</a>
     </div>
-  </section>
+    <a class="nav-cta" href="https://wa.me/201003381110?text=%D8%A3%D9%86%D8%A7%20%D9%85%D9%87%D8%AA%D9%85%20%D8%A8%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%20%D8%AD%D8%B6%D9%88%D8%B1%D9%8A%20%D9%84%D8%A5%D8%AF%D8%A7%D8%B1%D8%A9%20%D8%A7%D9%84%D8%AD%D8%B6%D9%88%D8%B1%20%D9%88%D8%A7%D9%84%D9%85%D8%B1%D8%AA%D8%A8%D8%A7%D8%AA%D8%8C%20%D9%85%D9%85%D9%83%D9%86%20%D9%86%D8%AA%D9%83%D9%84%D9%85%20%D8%B9%D9%86%20%D8%B9%D8%B1%D8%B6%20%D8%AA%D8%AC%D8%B1%D9%8A%D8%A8%D9%8A%D8%9F" target="_blank" rel="noopener">اطلب عرض تجريبي</a>
+  </div>
+</nav>
 
-  <section class="group">
-    <h2>قريبًا</h2>
-    <p class="body">الوضع الليلي لراحة عينيك في الشغل بالليل، وأكتر من مدير لنفس الشركة بكل الصلاحيات.</p>
-  </section>
-
-  <section class="group">
-    <h2>السعر</h2>
-    <dl class="facts">
-      <div class="fact-row"><dt>سعر الاشتراك</dt><dd>80 جنيه للموظف في الشهر</dd></div>
-      <div class="fact-row"><dt>الفرق الصغيرة</dt><dd>مجانًا</dd></div>
-      <div class="fact-row"><dt>طرق الدفع</dt><dd>تحويل بنكي أو فودافون كاش أو انستاباي</dd></div>
-      <div class="fact-row"><dt>أجهزة وتركيب</dt><dd>مش محتاج، موبايلات موظفينك بتكفي</dd></div>
-    </dl>
-    <div class="callout"><strong>ابدأ صغير</strong>جربه على موقع واحد، ولو عجبك زوّد باقي مواقعك بنفس الحساب.</div>
-  </section>
-
-  <section class="group">
-    <h2>اطلب عرض تجريبي</h2>
-    <p class="body">ابعت رسالة على واتساب وهنرد عليك ونرتبلك تجربة على موبايلك ببيانات شركتك.</p>
-    <p class="body">واتساب: <span class="phone-line">+20 100 338 1110</span></p>
-    <div class="cta-buttons">
-      <a class="btn btn-primary" href="https://wa.me/201003381110?text=%D8%A3%D9%86%D8%A7%20%D9%85%D9%87%D8%AA%D9%85%20%D8%A8%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%20%D8%AD%D8%B6%D9%88%D8%B1%D9%8A%20%D9%84%D8%A5%D8%AF%D8%A7%D8%B1%D8%A9%20%D8%A7%D9%84%D8%AD%D8%B6%D9%88%D8%B1%20%D9%88%D8%A7%D9%84%D9%85%D8%B1%D8%AA%D8%A8%D8%A7%D8%AA%D8%8C%20%D9%85%D9%85%D9%83%D9%86%20%D9%86%D8%AA%D9%83%D9%84%D9%85%20%D8%B9%D9%86%20%D8%B9%D8%B1%D8%B6%20%D8%AA%D8%AC%D8%B1%D9%8A%D8%A8%D9%8A%D8%9F" target="_blank" rel="noopener">كلمنا على واتساب</a>
-      <button class="btn btn-ghost" type="button" id="copyBtn" onclick="copyNumber()">انسخ الرقم</button>
+<header class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">نظام الحضور والمرتبات والموارد البشرية لمواقع العمل</span>
+      <h1>الحضور والمرتبات وشئون العاملين… كلها في تطبيق واحد</h1>
+      <p class="sub">كل موظف بيبصم من موبايله بالـ GPS وسيلفي، والمرتبات والإجازات والجزاءات بتتحسب لوحدها على قانون العمل المصري، وانت متابع كل مواقعك لحظة بلحظة من شاشة واحدة.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="https://wa.me/201003381110?text=%D8%A3%D9%86%D8%A7%20%D9%85%D9%87%D8%AA%D9%85%20%D8%A8%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%20%D8%AD%D8%B6%D9%88%D8%B1%D9%8A%20%D9%84%D8%A5%D8%AF%D8%A7%D8%B1%D8%A9%20%D8%A7%D9%84%D8%AD%D8%B6%D9%88%D8%B1%20%D9%88%D8%A7%D9%84%D9%85%D8%B1%D8%AA%D8%A8%D8%A7%D8%AA%D8%8C%20%D9%85%D9%85%D9%83%D9%86%20%D9%86%D8%AA%D9%83%D9%84%D9%85%20%D8%B9%D9%86%20%D8%B9%D8%B1%D8%B6%20%D8%AA%D8%AC%D8%B1%D9%8A%D8%A8%D9%8A%D8%9F" target="_blank" rel="noopener">اطلب عرض تجريبي</a>
+        <a class="btn btn-ghost" href="#video">شوف الفيديو</a>
+      </div>
+      <div class="hero-chips">
+        <span class="chip"><b>80 جنيه</b> للموظف / شهر</span>
+        <span class="chip">عربي وإنجليزي</span>
+        <span class="chip">مش محتاج أجهزة بصمة</span>
+        <span class="chip">بيشتغل من غير نت</span>
+      </div>
     </div>
-  </section>
+    <div class="hero-media" id="video">
+      <div class="video-frame">
+        <video src="hodory-promo.mp4" poster="hero.webp" controls playsinline preload="metadata"></video>
+      </div>
+      <p class="video-cap">شوف حضوري شغال: دقيقة واحدة تشرح كل حاجة، من كود الموظف لحد كشف المرتب.</p>
+    </div>
+  </div>
+</header>
 
-  <footer>الأسعار والمميزات دي المتاحة في نوفمبر 2026، وبعضها بيتطور مع كل نسخة جديدة.<br>حضوري تكنولوجي — ملكية وتطوير محمد ماجد</footer>
-
+<div class="strip">
+  <div class="wrap strip-in">
+    <b>مصمم من الأول لشغل المواقع واليوميات</b>
+    <span>مقاولات</span><span class="dot">•</span>
+    <span>أمن وحراسة</span><span class="dot">•</span>
+    <span>مصانع</span><span class="dot">•</span>
+    <span>تشغيل وصيانة</span>
+  </div>
 </div>
+
+<section id="features">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-eyebrow">المميزات</div>
+      <h2>كل اللي محتاجه في يوم الشغل، من البصمة لحد قسيمة المرتب</h2>
+    </div>
+    <div class="feats">
+      <div class="feat">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
+        <b>بصمة GPS وسيلفي</b>
+        <span>الموظف بيسجل حضور وانصراف من موبايله داخل نطاق الموقع اللي انت محدده بس، وصورة سيلفي مع كل تسجيل يراجعها المدير. مفيش "وصلت يا باشا" من البيت.</span>
+      </div>
+      <div class="feat">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h3"/></svg></div>
+        <b>كود شخصي وجهاز معتمد</b>
+        <span>كل موظف بيدخل بكوده الخاص على موبايله، وانت اللي بتوافق على الجهاز قبل أول تسجيل، فمفيش بصمة من جهاز غريب.</span>
+      </div>
+      <div class="feat">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+        <b>شيفتات وخصم تأخير تلقائي</b>
+        <span>شيفت لكل موقع ببداية ونهاية وسماحية تأخير، والتأخير بيتسجل بالدقيقة وبيتخصم لوحده من غير ما تراجع حاجة.</span>
+      </div>
+      <div class="feat">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19a4.5 4.5 0 0 0 .5-9 6 6 0 0 0-11.5 1.5A4 4 0 0 0 7 19h10.5z"/></svg></div>
+        <b>بيشتغل من غير نت ويزامن سحابيًا</b>
+        <span>البصمة بتتسجل حتى لو النت مقطوع وبتترفع أول ما يرجع. البصمات والطلبات متزامنة على السحابة أول بأول، وإعدادات الموارد البشرية محفوظة على موبايل المدير.</span>
+      </div>
+      <div class="feat">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18M8 15h4"/></svg></div>
+        <b>مرتبات وتسويات جاهزة</b>
+        <span>تسوية أسبوعية وكشف مرتب شهري لكل موقع، بيحسب الإضافي والسلف والجزاءات وخصومات التأخير لوحده، وبيتصدّر PDF وExcel وCSV.</span>
+      </div>
+      <div class="feat">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12v18l-2-1.5L14 21l-2-1.5L10 21l-2-1.5L6 21z"/><path d="M9 8h6M9 12h6"/></svg></div>
+        <b>قسيمة مرتب بالتأمينات والضريبة</b>
+        <span>قسيمة شهرية لكل موظف فيها المستحقات والاستقطاعات: تأمينات اجتماعية وضريبة مرتبات محسوبين على قانون العمل المصري، مع تكلفة صاحب العمل كاملة.</span>
+      </div>
+      <div class="feat">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <b>موارد بشرية على قانون العمل</b>
+        <span>7 أنواع إجازات بأرصدة وسجل لكل تعديل، سجل جزاءات تأديبية، عقود وتنبيهات انتهاء مستندات، حساب نهاية الخدمة، وصلاحية HR-admin بتتحدد لكل شخص.</span>
+      </div>
+      <div class="feat">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-8 8H5l-2 2V12a8 8 0 0 1 8-8h2a8 8 0 0 1 8 8z"/></svg></div>
+        <b>جروبات ورسايل ومساعد ذكي</b>
+        <span>جروبات للشركة كلها وشئون العاملين وكل موقع، وصندوق رسايل موظفين للمدير، ومساعد ذكي بيرد على سؤال الموظف عن رصيده وخصوماته ومرتبه في ثواني.</span>
+      </div>
+      <div class="feat">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 4 5.7 4 9s-1.5 6.5-4 9c-2.5-2.5-4-5.7-4-9s1.5-6.5 4-9z"/></svg></div>
+        <b>عربي وإنجليزي بالكامل</b>
+        <span>كل شاشة شغالة باللغتين، والاتجاه والخطوط بيتظبطوا حسب اللغة المختارة، فالموظف والمدير كل واحد يشتغل باللغة اللي مرتاح بيها.</span>
+      </div>
+    </div>
+
+    <div class="new" style="margin-top:16px">
+      <span class="tag">وصل حديثًا</span>
+      <ul>
+        <li>المساعد الذكي</li>
+        <li>جروبات الشركة والمواقع</li>
+        <li>رسايل الموظفين للمدير</li>
+        <li>الإنجليزية الكاملة</li>
+        <li>أفاتار لكل موظف</li>
+        <li>أيقونة التطبيق الجديدة</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="gallery" style="background:#fff;border-top:1px solid var(--hairline);border-bottom:1px solid var(--hairline)">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-eyebrow">التطبيق بالصور</div>
+      <h2>شوف حضوري من جواه</h2>
+      <p>لقطات حقيقية من آخر نسخة، بالعربي.</p>
+    </div>
+    <div class="gallery">
+      <figure class="shot"><div class="frame"><img src="g1-dashboard.webp" alt="لوحة حضوري الرئيسية وفيها ملخص الحضور واسم المالك والشريك" loading="lazy"></div><figcaption>الرئيسية: يومك في صورة</figcaption></figure>
+      <figure class="shot"><div class="frame"><img src="g2-assistant.webp" alt="المساعد الذكي في حضوري بيرد على أسئلة الموظف عن رصيد الإجازات والخصومات" loading="lazy"></div><figcaption>المساعد الذكي بيرد في ثواني</figcaption></figure>
+      <figure class="shot"><div class="frame"><img src="g3-groups.webp" alt="جروبات حضوري: الشركة كلها وشئون العاملين وموقع برج السلام" loading="lazy"></div><figcaption>جروبات للشركة والمواقع</figcaption></figure>
+      <figure class="shot"><div class="frame"><img src="g4-inbox.webp" alt="صندوق رسايل الموظفين عند المدير في حضوري" loading="lazy"></div><figcaption>رسايل الموظفين عند المدير</figcaption></figure>
+      <figure class="shot"><div class="frame"><img src="g5-punch.webp" alt="شاشة بصمة الموظف في حضوري بالوقت وزر التسجيل" loading="lazy"></div><figcaption>بصمة الموظف بضغطة واحدة</figcaption></figure>
+      <figure class="shot"><div class="frame"><img src="g6-punchlist.webp" alt="سجل البصمات في حضوري وكل تسجيلة ومعاها سيلفي الموظف" loading="lazy"></div><figcaption>سجل البصمات بالسيلفي</figcaption></figure>
+      <figure class="shot"><div class="frame"><img src="g7-payslip.webp" alt="قسيمة المرتب الشهرية في حضوري وفيها التأمينات الاجتماعية وضريبة المرتبات وصافي المرتب" loading="lazy"></div><figcaption>قسيمة المرتب بالتأمينات والضريبة</figcaption></figure>
+      <figure class="shot"><div class="frame"><img src="g8-hrhub.webp" alt="بوابة الموارد البشرية في حضوري على قانون العمل المصري" loading="lazy"></div><figcaption>الموارد البشرية وقانون العمل</figcaption></figure>
+      <figure class="shot"><div class="frame"><img src="g9-empfile.webp" alt="ملف الموظف في حضوري وفيه رصيد الإجازات وسجل الحضور" loading="lazy"></div><figcaption>ملف كل موظف كامل</figcaption></figure>
+      <figure class="shot"><div class="frame"><img src="g10-language.webp" alt="إعدادات اللغة في حضوري عربي وإنجليزي" loading="lazy"></div><figcaption>عربي وإنجليزي بضغطة</figcaption></figure>
+    </div>
+    <p class="gal-hint">اسحب عشان تشوف باقي الشاشات ←</p>
+  </div>
+</section>
+
+<section id="pricing">
+  <div class="wrap">
+    <div class="pricing">
+      <div class="price-num">80 جنيه<small>للموظف في الشهر</small></div>
+      <ul class="price-points">
+        <li>الفرق الصغيرة مجانًا</li>
+        <li>من غير أي أجهزة أو تركيب: موبايلات موظفينك بتكفي</li>
+        <li>الدفع: تحويل بنكي أو فودافون كاش أو انستاباي</li>
+        <li>ابدأ بموقع واحد، وزوّد باقي مواقعك بنفس الحساب</li>
+      </ul>
+      <div class="price-cta">
+        <a class="btn btn-primary" href="https://wa.me/201003381110?text=%D8%A3%D9%86%D8%A7%20%D9%85%D9%87%D8%AA%D9%85%20%D8%A8%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%20%D8%AD%D8%B6%D9%88%D8%B1%D9%8A%20%D9%84%D8%A5%D8%AF%D8%A7%D8%B1%D8%A9%20%D8%A7%D9%84%D8%AD%D8%B6%D9%88%D8%B1%20%D9%88%D8%A7%D9%84%D9%85%D8%B1%D8%AA%D8%A8%D8%A7%D8%AA%D8%8C%20%D9%85%D9%85%D9%83%D9%86%20%D9%86%D8%AA%D9%83%D9%84%D9%85%20%D8%B9%D9%86%20%D8%B9%D8%B1%D8%B6%20%D8%AA%D8%AC%D8%B1%D9%8A%D8%A8%D9%8A%D8%9F" target="_blank" rel="noopener">اطلب عرض تجريبي</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-eyebrow">البداية</div>
+      <h2>تبدأ إزاي؟</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><b>اطلب عرضًا تجريبيًا</b><span>رسالة واتساب واحدة، ونرتبلك تجربة على موبايلك ببيانات شركتك.</span></div>
+      <div class="step"><div class="n">2</div><b>سجّل شركتك وموظفينك</b><span>التسجيل والإعداد بيتموا أونلاين في نفس اليوم، من غير أي زيارات أو تركيب.</span></div>
+      <div class="step"><div class="n">3</div><b>ابدأ المتابعة</b><span>الحضور والتأخير والمرتبات والطلبات قدامك لحظة بلحظة، لكل مواقعك.</span></div>
+    </div>
+    <p class="soon">قريبًا: <b>الوضع الليلي</b> لراحة عينيك في الشغل بالليل.</p>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="final">
+      <h2>اطلب عرضك التجريبي دلوقتي</h2>
+      <p>ابعتلنا على واتساب وهنرد عليك ونجهزلك تجربة كاملة على موبايلك.</p>
+      <div class="row">
+        <a class="btn btn-navy" href="https://wa.me/201003381110?text=%D8%A3%D9%86%D8%A7%20%D9%85%D9%87%D8%AA%D9%85%20%D8%A8%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%20%D8%AD%D8%B6%D9%88%D8%B1%D9%8A%20%D9%84%D8%A5%D8%AF%D8%A7%D8%B1%D8%A9%20%D8%A7%D9%84%D8%AD%D8%B6%D9%88%D8%B1%20%D9%88%D8%A7%D9%84%D9%85%D8%B1%D8%AA%D8%A8%D8%A7%D8%AA%D8%8C%20%D9%85%D9%85%D9%83%D9%86%20%D9%86%D8%AA%D9%83%D9%84%D9%85%20%D8%B9%D9%86%20%D8%B9%D8%B1%D8%B6%20%D8%AA%D8%AC%D8%B1%D9%8A%D8%A8%D9%8A%D8%9F" target="_blank" rel="noopener">كلمنا على واتساب</a>
+        <button class="btn btn-line" id="copyBtn" onclick="copyNumber()">انسخ الرقم</button>
+      </div>
+      <p style="margin-top:14px;font-size:14px">واتساب: <span class="phone-line">+20 100 338 1110</span></p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    الأسعار والمميزات دي المتاحة في نوفمبر 2026، وبعضها بيتطور مع كل نسخة جديدة.
+    <div class="owner">حضوري تكنولوجي — ملكية وتطوير محمد ماجد</div>
+  </div>
+</footer>
+
 <script>
 function copyNumber() {
   var btn = document.getElementById('copyBtn');
   var done = function () { btn.textContent = 'تم النسخ'; setTimeout(function () { btn.textContent = 'انسخ الرقم'; }, 2000); };
+  var num = '+201003381110';
   if (navigator.clipboard && navigator.clipboard.writeText) {
-    navigator.clipboard.writeText('+201003381110').then(done, done);
+    navigator.clipboard.writeText(num).then(done).catch(done);
   } else {
     var ta = document.createElement('textarea');
-    ta.value = '+201003381110';
-    document.body.appendChild(ta);
-    ta.select();
+    ta.value = num; document.body.appendChild(ta); ta.select();
     try { document.execCommand('copy'); } catch (e) {}
-    document.body.removeChild(ta);
-    done();
+    document.body.removeChild(ta); done();
   }
 }
 </script>
