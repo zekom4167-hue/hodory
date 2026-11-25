@@ -7,7 +7,6 @@
 <meta name="description" content="كل موظف بيبصم حضور من موبايله بالبصمة والـ GPS، وانت بتتابع كل مواقعك وبتطلع المرتبات من تطبيق واحد. 80 جنيه للموظف في الشهر.">
 <meta property="og:title" content="حضوري: حضور ومرتبات شركتك في تطبيق واحد">
 <meta property="og:description" content="كل موظف بيبصم حضور من موبايله بالبصمة والـ GPS، وانت بتتابع كل مواقعك وبتطلع المرتبات من تطبيق واحد.">
-<!-- بعد ما الريبو يتنشر، حط الرابط الكامل للصورة هنا عشان لينك الواتساب يطلع بالصورة -->
 <meta property="og:image" content="https://zekom4167-hue.github.io/hodory/hero.webp">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#1F3A5F">
@@ -58,7 +57,7 @@
     font-weight: 700;
     margin: 0 0 14px;
   }
-  .intro { margin: 0 0 24px; color: var(--ink); }
+  .intro { margin: 0 0 24px; }
   .hero { margin: 0 0 6px; }
   .hero img { width: 100%; height: auto; border-radius: 20px; display: block; }
   .caption { color: var(--ink2); font-size: 12.5px; margin: 6px 0 0; }
@@ -77,6 +76,20 @@
     margin: 0 0 12px;
   }
   p.body { margin: 0 0 8px; }
+  ul.pains {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  ul.pains li {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--hairline);
+    display: flex;
+    gap: 12px;
+    align-items: baseline;
+  }
+  ul.pains li:last-child { border-bottom: 0; }
+  ul.pains li::before { content: "×"; color: var(--orange); font-weight: 800; font-size: 18px; line-height: 1; }
   ol.features {
     list-style: none;
     margin: 0;
@@ -101,6 +114,20 @@
   }
   .feat-name { font-weight: 700; display: block; }
   .feat-detail { color: var(--ink2); }
+  .shots {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  @media (min-width: 768px) { .shots { grid-template-columns: repeat(3, 1fr); } }
+  .shots img {
+    width: 100%;
+    height: auto;
+    border-radius: 14px;
+    border: 1px solid var(--hairline);
+    display: block;
+    background: var(--sand);
+  }
   dl.facts { margin: 0; }
   .fact-row {
     display: flex;
@@ -157,9 +184,9 @@
 <div class="page">
 
   <header>
-    <h1>حضوري: حضور ومرتبات شركتك في تطبيق واحد</h1>
+    <h1>حضوري: نظام الحضور والمرتبات اللي مواقعك محتاجاه</h1>
     <p class="price-fact">80 جنيه للموظف في الشهر</p>
-    <p class="intro">كل موظف بيبصم حضور من موبايله بالبصمة والـ GPS، وانت بتتابع كل مواقعك وبتطلع المرتبات من تطبيق واحد. عربي بالكامل، وبتشتغل بيه في دقايق من غير أجهزة بصمة ولا تركيب.</p>
+    <p class="intro">كل موظف بيبصم حضور من موبايله بالبصمة والـ GPS، وانت بتتابع كل مواقعك لحظة بلحظة وبتطلع المرتبات من تطبيق واحد. عربي بالكامل، وبتشتغل بيه في دقايق من غير أجهزة بصمة ولا تركيب.</p>
   </header>
 
   <figure class="hero">
@@ -168,28 +195,49 @@
   </figure>
 
   <section class="group">
-    <h2>ليه حضوري</h2>
-    <p class="key-sentence">اتعمل من الأول لشركات اللي شغالة بعمالة مواقع ويوميات، مش لشركات المكاتب.</p>
-    <p class="body">مفيش زيارة تركيب ولا مكالمة مبيعات. بتسجل شركتك وبتضيف موظفينك وبتبدأ في نفس اليوم، والسعر معلن وواضح من دلوقتي.</p>
+    <h2>عارف يوم أول الشهر؟</h2>
+    <ul class="pains">
+      <li><span>كشف حضور ورقي بيتملى من الذاكرة آخر الشهر، ومين يثبت مين؟</span></li>
+      <li><span>خناق مرتبات على واتساب: كل موظف بيقول اتخصمت غلط، ومفيش مستند يفصل.</span></li>
+      <li><span>ثلاث مواقع شغالين، ومين حاضر فين دلوقتي؟ مش هتعرف غير بتليفون لكل مسئول.</span></li>
+    </ul>
+    <p class="key-sentence">حضوري بيقفل الدواير دي كلها: بصمة موبايل بموقع مؤكد، وكشف مرتب موثق لكل موظف، وكل مواقعك قدامك في شاشة واحدة.</p>
+  </section>
+
+  <section class="group">
+    <h2>اتعمل لشغل المواقع، مش للمكاتب</h2>
+    <p class="body">حضوري متصمم من الأول للشركات اللي شغالة بعمالة مواقع ويوميات: مقاولات، أمن وحراسة، مصانع، وتشغيل وصيانة. مفيش زيارة تركيب ولا مكالمة مبيعات: بتسجل شركتك وبتضيف موظفينك وبتبدأ في نفس اليوم، والسعر معلن وواضح من دلوقتي.</p>
   </section>
 
   <section class="group">
     <h2>كل اللي محتاجه في يوم الشغل</h2>
     <ol class="features">
-      <li><span><span class="feat-name">الحضور بالبصمة والـ GPS</span><span class="feat-detail">كل موظف له كوده وجهازه المعتمد، وبيبصم حضور وانصراف من موبايله وهو داخل نطاق الموقع اللي انت محدده.</span></span></li>
+      <li><span><span class="feat-name">الحضور بالبصمة والـ GPS</span><span class="feat-detail">كل موظف له كوده وجهازه المعتمد، وبيبصم حضور وانصراف من موبايله وهو داخل نطاق الموقع اللي انت محدده. مفيش "وصلت يا باشا" من البيت.</span></span></li>
       <li><span><span class="feat-name">اعتماد أجهزة الموظفين</span><span class="feat-detail">مفيش بصمة من جهاز غريب. انت اللي بتوافق على موبايل كل موظف قبل ما يشتغل.</span></span></li>
-      <li><span><span class="feat-name">الطلبات والموافقات</span><span class="feat-detail">إجازات (سنوية وعارضة ومرضية وبدون أجر) ومأموريات وأذونات وساعات إضافية، وانت بتوافق أو ترفض من موبايلك.</span></span></li>
-      <li><span><span class="feat-name">الخصومات والجزاءات والسلف</span><span class="feat-detail">سجلها على حساب الموظف أول بأول، وهي بتظهر لوحدها في كشف المرتب في آخر الشهر.</span></span></li>
-      <li><span><span class="feat-name">التسوية الأسبوعية والمرتبات الشهرية</span><span class="feat-detail">كشوف مرتبات جاهزة لكل موقع، شغل يومية أو شهري، بتتصدّر PDF و Excel.</span></span></li>
+      <li><span><span class="feat-name">الطلبات والموافقات</span><span class="feat-detail">إجازات (سنوية وعارضة ومرضية وبدون أجر) ومأموريات وأذونات وساعات إضافية، وانت بتوافق أو ترفض من موبايلك بضغطة.</span></span></li>
+      <li><span><span class="feat-name">الخصومات والجزاءات والسلف</span><span class="feat-detail">سجلها على حساب الموظف أول بأول، وهي بتظهر لوحدها في كشف مرتبه آخر الشهر، بالورقة والمستند اللي يقفل أي نقاش.</span></span></li>
+      <li><span><span class="feat-name">التسوية الأسبوعية والمرتبات الشهرية</span><span class="feat-detail">كشوف مرتبات جاهزة لكل موقع، شغل يومية أو شهري، بتتصدّر PDF و Excel وتتطبع على طول.</span></span></li>
       <li><span><span class="feat-name">ملف لكل موظف</span><span class="feat-detail">بياناته وعقده ومستنداته في مكان واحد، وتنبيه قبل ما أي مستند يخلص ميعاده.</span></span></li>
-      <li><span><span class="feat-name">بياناتك محفوظة</span><span class="feat-detail">مزامنة سحابية ونسخ احتياطي، فلو موبايلك ضاع أو اتغير بياناتك موجودة زي ما هي.</span></span></li>
+      <li><span><span class="feat-name">بياناتك محفوظة</span><span class="feat-detail">مزامنة سحابية ونسخ احتياطي، فلو موبايلك ضاع أو اتغير، بيانات شركتك موجودة زي ما هي.</span></span></li>
       <li><span><span class="feat-name">قفل التطبيق</span><span class="feat-detail">حضوري على موبايلك مقفول، محدش يفتحه غيرك.</span></span></li>
     </ol>
   </section>
 
   <section class="group">
+    <h2>شوف التطبيق بعينك</h2>
+    <div class="shots" id="shots">
+      <img src="shot-1-dashboard.webp" alt="شاشة تسجيل الحضور اليومي في تطبيق حضوري: ملخص الحاضرين والغائبين وكروت الموظفين" loading="lazy">
+      <img src="shot-2-checkin.webp" alt="شاشة بصمة الحضور والانصراف في حضوري: زر بصمة كبير مع اسم الموقع والوقت" loading="lazy">
+      <img src="shot-3-requests.webp" alt="شاشة الطلبات في حضوري: طلبات إجازة ومأمورية مع أزرار موافقة ورفض" loading="lazy">
+      <img src="shot-4-wages.webp" alt="شاشة الأجور والتسوية الأسبوعية في حضوري: الإجمالي والسلف والجزاءات والصافي لكل موظف" loading="lazy">
+      <img src="shot-5-payroll.webp" alt="شاشة كشف المرتبات الشهري في حضوري: صافي مرتب كل موظف مع الأيام والساعات الإضافية والسلف" loading="lazy">
+      <img src="shot-6-documents.webp" alt="شاشة الأوراق وتنبيهات الانتهاء في حضوري: مستندات الموظفين مع الأيام المتبقية على الانتهاء" loading="lazy">
+    </div>
+  </section>
+
+  <section class="group">
     <h2>قريبًا</h2>
-    <p class="body">الوضع الليلي لراحة عينيك في الشغل بالليل، أكتر من مدير لنفس الشركة بكل الصلاحيات.</p>
+    <p class="body">الوضع الليلي لراحة عينيك في الشغل بالليل، وأكتر من مدير لنفس الشركة بكل الصلاحيات.</p>
   </section>
 
   <section class="group">
@@ -198,7 +246,7 @@
       <div class="fact-row"><dt>سعر الاشتراك</dt><dd>80 جنيه للموظف في الشهر</dd></div>
       <div class="fact-row"><dt>الفرق الصغيرة</dt><dd>مجانًا</dd></div>
       <div class="fact-row"><dt>طرق الدفع</dt><dd>تحويل بنكي أو فودافون كاش أو انستاباي</dd></div>
-      <div class="fact-row"><dt>أجهزة وتركيب</dt><dd>ولا مليم، موبايلات موظفينك هي اللي بتشتغل</dd></div>
+      <div class="fact-row"><dt>أجهزة وتركيب</dt><dd>مش محتاج، موبايلات موظفينك بتكفي</dd></div>
     </dl>
     <div class="callout"><strong>ابدأ صغير</strong>جربه على موقع واحد، ولو عجبك زوّد باقي مواقعك بنفس الحساب.</div>
   </section>
