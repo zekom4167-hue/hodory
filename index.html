@@ -337,9 +337,7 @@
       <div class="row">
         <a class="btn btn-navy" href="https://wa.me/201003381110?text=%D8%A3%D9%86%D8%A7%20%D9%85%D9%87%D8%AA%D9%85%20%D8%A8%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%20%D8%AD%D8%B6%D9%88%D8%B1%D9%8A%20%D9%84%D8%A5%D8%AF%D8%A7%D8%B1%D8%A9%20%D8%A7%D9%84%D8%AD%D8%B6%D9%88%D8%B1%20%D9%88%D8%A7%D9%84%D9%85%D8%B1%D8%AA%D8%A8%D8%A7%D8%AA%D8%8C%20%D9%85%D9%85%D9%83%D9%86%20%D9%86%D8%AA%D9%83%D9%84%D9%85%20%D8%B9%D9%86%20%D8%B9%D8%B1%D8%B6%20%D8%AA%D8%AC%D8%B1%D9%8A%D8%A8%D9%8A%D8%9F" target="_blank" rel="noopener">كلمنا على واتساب</a>
         <a class="btn btn-line" href="https://github.com/zekom4167-hue/hodory/releases/download/v0.9.12-debug/Hodory-v0.9.12-debug.apk">حمّل التطبيق (Android)</a>
-        <button class="btn btn-line" id="copyBtn" onclick="copyNumber()">انسخ الرقم</button>
       </div>
-      <p style="margin-top:14px;font-size:14px">واتساب: <span class="phone-line">+20 100 338 1110</span></p>
     </div>
   </div>
 </section>
@@ -352,20 +350,5 @@
   </div>
 </footer>
 
-<script>
-function copyNumber() {
-  var btn = document.getElementById('copyBtn');
-  var done = function () { btn.textContent = 'تم النسخ'; setTimeout(function () { btn.textContent = 'انسخ الرقم'; }, 2000); };
-  var num = '+201003381110';
-  if (navigator.clipboard && navigator.clipboard.writeText) {
-    navigator.clipboard.writeText(num).then(done).catch(done);
-  } else {
-    var ta = document.createElement('textarea');
-    ta.value = num; document.body.appendChild(ta); ta.select();
-    try { document.execCommand('copy'); } catch (e) {}
-    document.body.removeChild(ta); done();
-  }
-}
-</script>
 </body>
 </html>
