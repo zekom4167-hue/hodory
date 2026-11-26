@@ -139,6 +139,47 @@
 
   footer { padding: 26px 0 34px; color: var(--ink2); font-size: 13.5px; text-align: center; }
   footer .owner { color: var(--navy); font-weight: 700; margin-top: 4px; }
+
+  /* ---------- v2 polish ---------- */
+  :root { --shadow-s: 0 1px 2px rgba(11,31,74,.05), 0 6px 18px rgba(11,31,74,.06); --shadow-m: 0 2px 4px rgba(11,31,74,.06), 0 18px 44px rgba(11,31,74,.12); }
+  body { -webkit-font-smoothing: antialiased; background: #f5f8fe; }
+  .nav { background: rgba(255,255,255,.82); border-bottom: 1px solid rgba(220,228,242,.9); }
+  .nav-cta, .btn-primary { background: linear-gradient(180deg, #f59a3c, #ee7f16); box-shadow: 0 8px 20px rgba(240,138,36,.35), inset 0 1px 0 rgba(255,255,255,.35); }
+  .nav-cta:hover, .btn-primary:hover { background: linear-gradient(180deg, #f59a3c, #e3730c); transform: translateY(-1px); }
+  .btn { transition: transform .15s ease, box-shadow .15s ease, background .15s ease; }
+  .btn-navy { box-shadow: 0 8px 20px rgba(11,31,74,.28); }
+  .hero { padding: 64px 0 72px; background: radial-gradient(900px 420px at 85% -10%, rgba(94,140,255,.35), transparent 60%), radial-gradient(700px 360px at 5% 110%, rgba(240,138,36,.18), transparent 60%), linear-gradient(160deg, #081a40 0%, #0f33a8 60%, #1c4ccf 100%); }
+  .hero h1 { font-size: 34px; letter-spacing: -.2px; text-shadow: 0 2px 24px rgba(0,0,0,.25); }
+  @media (min-width: 760px) { .hero h1 { font-size: 48px; line-height: 1.45; } }
+  .hero .sub { font-size: 17px; color: #d3def0; }
+  .eyebrow { backdrop-filter: blur(6px); }
+  .chip { backdrop-filter: blur(6px); padding: 6px 14px; }
+  .video-frame { border-radius: 28px; padding: 12px; background: linear-gradient(160deg, rgba(255,255,255,.14), rgba(255,255,255,.04)); border: 1px solid rgba(255,255,255,.22); box-shadow: 0 40px 90px rgba(3,10,35,.55), 0 0 0 1px rgba(255,255,255,.04) inset; }
+  .strip { background: #0c2a86; }
+  section { padding: 72px 0; }
+  .sec-eyebrow { display: inline-flex; align-items: center; gap: 8px; letter-spacing: .3px; }
+  .sec-eyebrow::before { content: ''; width: 22px; height: 3px; border-radius: 2px; background: var(--orange); }
+  .sec-head h2 { letter-spacing: -.2px; }
+  .feat { box-shadow: var(--shadow-s); padding: 24px; border-color: #e4ebf7; }
+  .feat:hover { box-shadow: var(--shadow-m); border-color: #cfdcf7; }
+  .feat .ic { width: 46px; height: 46px; background: linear-gradient(145deg, #e8efff, #dbe6ff); box-shadow: inset 0 0 0 1px rgba(18,60,190,.08); }
+  .new { box-shadow: var(--shadow-s); }
+  .shot .frame { border: 6px solid #0b1f4a; border-radius: 28px; box-shadow: var(--shadow-m); }
+  .step { box-shadow: var(--shadow-s); }
+  .step .n { background: linear-gradient(145deg, #123cbe, #0b1f4a); box-shadow: 0 6px 14px rgba(18,60,190,.35); }
+  .pricing { box-shadow: 0 30px 70px rgba(11,31,74,.35); background: radial-gradient(600px 260px at 90% 0%, rgba(94,140,255,.35), transparent 60%), linear-gradient(135deg, #081a40, #123cbe); }
+  .final { box-shadow: var(--shadow-m); }
+  footer { border-top: 1px solid var(--hairline); margin-top: 8px; }
+  /* gentle reveal on scroll (only when JS runs and motion is allowed) */
+  .js .reveal { opacity: 0; transform: translateY(14px); transition: opacity .55s ease, transform .55s ease; }
+  .js .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) { .js .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
+  /* sticky WhatsApp bar on phones */
+  .wa-bar { display: none; }
+  @media (max-width: 759px) {
+    .wa-bar { display: flex; position: fixed; z-index: 60; inset-inline: 14px; bottom: 14px; justify-content: center; align-items: center; gap: 8px; background: #25D366; color: #fff; font-weight: 800; font-size: 16px; padding: 14px; border-radius: 999px; text-decoration: none; box-shadow: 0 12px 30px rgba(18,140,70,.45); }
+    body { padding-bottom: 84px; }
+  }
 </style>
 </head>
 <body>
@@ -159,7 +200,7 @@
   <div class="wrap hero-grid">
     <div>
       <span class="eyebrow">نظام الحضور والمرتبات والموارد البشرية لمواقع العمل</span>
-      <h1>الحضور والمرتبات وشئون العاملين… كلها في تطبيق واحد</h1>
+      <h1>الحضور والمرتبات وشئون الموظفين… كلها في تطبيق واحد</h1>
       <p class="sub">كل موظف بيبصم من موبايله بالـ GPS وسيلفي، والمرتبات والإجازات والجزاءات بتتحسب لوحدها على قانون العمل المصري، وانت متابع كل مواقعك لحظة بلحظة من شاشة واحدة.</p>
       <div class="hero-ctas">
         <a class="btn btn-primary" href="https://wa.me/201003381110?text=%D8%A3%D9%86%D8%A7%20%D9%85%D9%87%D8%AA%D9%85%20%D8%A8%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%20%D8%AD%D8%B6%D9%88%D8%B1%D9%8A%20%D9%84%D8%A5%D8%AF%D8%A7%D8%B1%D8%A9%20%D8%A7%D9%84%D8%AD%D8%B6%D9%88%D8%B1%20%D9%88%D8%A7%D9%84%D9%85%D8%B1%D8%AA%D8%A8%D8%A7%D8%AA%D8%8C%20%D9%85%D9%85%D9%83%D9%86%20%D9%86%D8%AA%D9%83%D9%84%D9%85%20%D8%B9%D9%86%20%D8%B9%D8%B1%D8%B6%20%D8%AA%D8%AC%D8%B1%D9%8A%D8%A8%D9%8A%D8%9F" target="_blank" rel="noopener">اطلب عرض تجريبي</a>
@@ -236,7 +277,7 @@
       <div class="feat">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-8 8H5l-2 2V12a8 8 0 0 1 8-8h2a8 8 0 0 1 8 8z"/></svg></div>
         <b>جروبات ورسايل الموظفين</b>
-        <span>جروبات للشركة كلها وشئون العاملين وكل موقع، وصندوق رسايل موظفين للمدير يرد منه على أي استفسار، فالتواصل كله جوه التطبيق.</span>
+        <span>جروبات للشركة كلها وشئون الموظفين وكل موقع، وصندوق رسايل موظفين للمدير يرد منه على أي استفسار، فالتواصل كله جوه التطبيق.</span>
       </div>
       <div class="feat">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.7 4.6L18 9.2l-4.3 1.6L12 15.5l-1.7-4.7L6 9.2l4.3-1.6z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/></svg></div>
@@ -284,8 +325,8 @@
     <div class="gallery">
       <figure class="shot"><div class="frame"><img src="g1-dashboard.webp" alt="لوحة حضوري الرئيسية وفيها ملخص الحضور واسم المالك والشريك" loading="lazy"></div><figcaption>الرئيسية: يومك في صورة</figcaption></figure>
       <figure class="shot"><div class="frame"><img src="g2-assistant.webp" alt="المساعد الذكي في حضوري بيرد على أسئلة الموظف عن رصيد الإجازات والخصومات" loading="lazy"></div><figcaption>المساعد الذكي بيرد في ثواني</figcaption></figure>
-      <figure class="shot"><div class="frame"><img src="g3-rooms.webp" alt="جروبات حضوري: الشركة كلها وشئون العاملين وموقع برج السلام" loading="lazy"></div><figcaption>جروبات للشركة والمواقع</figcaption></figure>
-      <figure class="shot"><div class="frame"><img src="g4-roomchat.webp" alt="جروب شئون العاملين في حضوري ومحادثة بين موظف والإدارة" loading="lazy"></div><figcaption>جروب شئون العاملين شغال</figcaption></figure>
+      <figure class="shot"><div class="frame"><img src="g3-rooms.webp" alt="جروبات حضوري: الشركة كلها وشئون الموظفين وموقع برج السلام" loading="lazy"></div><figcaption>جروبات للشركة والمواقع</figcaption></figure>
+      <figure class="shot"><div class="frame"><img src="g4-roomchat.webp" alt="جروب شئون الموظفين في حضوري ومحادثة بين موظف والإدارة" loading="lazy"></div><figcaption>جروب شئون الموظفين شغال</figcaption></figure>
       <figure class="shot"><div class="frame"><img src="g5-requests.webp" alt="شاشة الطلبات في حضوري: إضافي وإجازة وعمل من المنزل بموافقة أو رفض بضغطة" loading="lazy"></div><figcaption>الطلبات: وافق أو ارفض بضغطة</figcaption></figure>
       <figure class="shot"><div class="frame"><img src="g6-employees.webp" alt="قائمة الموظفين في حضوري بالأجور اليومية والأفاتار الجديدة" loading="lazy"></div><figcaption>الموظفين وأجورهم اليومية</figcaption></figure>
       <figure class="shot"><div class="frame"><img src="g7-payslip.webp" alt="قسيمة المرتب الشهرية في حضوري وفيها التأمينات الاجتماعية وضريبة المرتبات وصافي المرتب" loading="lazy"></div><figcaption>قسيمة المرتب بالتأمينات والضريبة</figcaption></figure>
@@ -336,7 +377,7 @@
       <p>ابعتلنا على واتساب وهنرد عليك ونجهزلك عرض تجريبي ببيانات افتراضية.</p>
       <div class="row">
         <a class="btn btn-navy" href="https://wa.me/201003381110?text=%D8%A3%D9%86%D8%A7%20%D9%85%D9%87%D8%AA%D9%85%20%D8%A8%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%20%D8%AD%D8%B6%D9%88%D8%B1%D9%8A%20%D9%84%D8%A5%D8%AF%D8%A7%D8%B1%D8%A9%20%D8%A7%D9%84%D8%AD%D8%B6%D9%88%D8%B1%20%D9%88%D8%A7%D9%84%D9%85%D8%B1%D8%AA%D8%A8%D8%A7%D8%AA%D8%8C%20%D9%85%D9%85%D9%83%D9%86%20%D9%86%D8%AA%D9%83%D9%84%D9%85%20%D8%B9%D9%86%20%D8%B9%D8%B1%D8%B6%20%D8%AA%D8%AC%D8%B1%D9%8A%D8%A8%D9%8A%D8%9F" target="_blank" rel="noopener">كلمنا على واتساب</a>
-        <a class="btn btn-line" href="https://github.com/zekom4167-hue/hodory/releases/download/v0.9.12-debug/Hodory-v0.9.12-debug.apk">حمّل التطبيق (Android)</a>
+        <a class="btn btn-line" href="https://github.com/zekom4167-hue/hodory/releases/download/v0.9.16-debug/Hodory-v0.9.16-debug.apk">حمّل التطبيق (Android)</a>
       </div>
     </div>
   </div>
@@ -350,5 +391,17 @@
   </div>
 </footer>
 
+<a class="wa-bar" href="https://wa.me/201003381110" target="_blank" rel="noopener">كلمني واتساب</a>
+<script>
+(function(){
+  document.documentElement.classList.add('js');
+  var els=[].slice.call(document.querySelectorAll('.feat,.step,.shot,.new,.pricing,.final,.sec-head'));
+  els.forEach(function(e){e.classList.add('reveal');});
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in');});return;}
+  var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}});},{threshold:.12});
+  els.forEach(function(e){io.observe(e);});
+  setTimeout(function(){els.forEach(function(e){e.classList.add('in');});},4000);
+})();
+</script>
 </body>
 </html>
