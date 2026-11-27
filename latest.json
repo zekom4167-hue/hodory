@@ -1,0 +1,10 @@
+{
+ "package": "com.mohamed.hodory",
+ "version": "0.9.23",
+ "code": 120,
+ "url": "https://github.com/zekom4167-hue/hodory/releases/download/v0.9.23-debug/Hodory-v0.9.23-debug.apk",
+ "sha256": "7e67c18abdee8d1525f3560d683f4f300b59169e5a27bfd426b0d2a65c47ebb4",
+ "size": 78574223,
+ "notes": "إضافة التحقق الآمن من التحديثات داخل التطبيق.",
+ "cert_sha256": "e165eed1163bb3883e43e630360c3e83c8060bcb5f7de7a5975d60b1d0f65a15"
+}

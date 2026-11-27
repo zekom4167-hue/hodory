@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>تحميل حضوري بأمان (Android)</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="../app-icon.webp" type="image/webp">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0B1F4A;--navy2:#123CBE;--orange:#F08A24;--ink:#1c2530;--ink2:#55606e;--line:#dce4f2;--sand:#f3f6fc}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Tajawal',system-ui,sans-serif;background:var(--sand);color:var(--ink);line-height:1.8}
+.top{background:linear-gradient(160deg,var(--navy),var(--navy2));color:#fff;padding:34px 18px 40px;text-align:center}
+.top img{width:72px;height:72px;border-radius:18px}
+.top h1{font-size:28px;margin:10px 0 4px}
+.top p{opacity:.85}
+.wrap{max-width:720px;margin:0 auto;padding:0 16px 60px}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px;margin-top:16px;box-shadow:0 6px 18px rgba(11,31,74,.06)}
+.card h2{font-size:20px;color:var(--navy);margin-bottom:8px}
+.dl{display:block;text-align:center;background:linear-gradient(180deg,#f59a3c,#ee7f16);color:#fff;font-weight:800;font-size:19px;padding:15px;border-radius:999px;text-decoration:none;margin:-26px 0 0;box-shadow:0 10px 24px rgba(240,138,36,.4)}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;font-size:14px;color:var(--ink2)}
+.meta span{background:var(--sand);border-radius:999px;padding:3px 12px}
+code{direction:ltr;unicode-bidi:plaintext;display:block;background:#0b1f4a;color:#cfe0ff;border-radius:10px;padding:10px 12px;font-size:12.5px;word-break:break-all;margin:6px 0;text-align:left;font-family:ui-monospace,Menlo,Consolas,monospace}
+ol,ul{padding-inline-start:22px}li{margin:5px 0}
+.warn{background:#fff6e8;border-color:#f3d49c}
+.ok{background:#eefaf2;border-color:#bfe6cc}
+small{color:var(--ink2)}
+a{color:var(--navy2)}
+</style>
+</head>
+<body>
+<div class="top">
+  <img src="../app-icon.webp" alt="">
+  <h1>حمّل حضوري بأمان</h1>
+  <p>التطبيق مش على جوجل بلاي حاليًا، فالخطوات دي بتحميك من النسخ المزيفة</p>
+</div>
+<div class="wrap">
+  <div class="card" style="margin-top:-22px">
+    <a class="dl" id="dl" href="https://github.com/zekom4167-hue/hodory/releases/download/v0.9.23-debug/Hodory-v0.9.23-debug.apk">تحميل حضوري <span id="ver">0.9.23</span> (Android)</a>
+    <div class="meta"><span>الحجم: حوالي 75 ميجا</span><span>أندرويد فقط</span><span>مفيش نسخة iPhone</span></div>
+  </div>
+
+  <div class="card ok">
+    <h2>1. حمّل من هنا بس</h2>
+    <ul>
+      <li>الرابط الرسمي الوحيد: صفحة حضوري على GitHub باسم <b>zekom4167-hue/hodory</b>، وبتفتح من الزر فوق.</li>
+      <li>متثبتش ملف حضوري بيجيلك على واتساب أو تيليجرام من أي حد، حتى لو اسمه نفس الاسم. كمل من الصفحة دي.</li>
+      <li>اسم الملف لازم يكون <b id="fname">Hodory-v0.9.23-debug.apk</b>.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>2. اتأكد إن الملف سليم (اختياري، 30 ثانية)</h2>
+    <p>بصمة الملف (SHA-256) لازم تطابق ده بالظبط:</p>
+    <code id="sha">7e67c18abdee8d1525f3560d683f4f300b59169e5a27bfd426b0d2a65c47ebb4</code>
+    <p><b>على الكمبيوتر:</b> ويندوز: <code>certutil -hashfile ملف.apk SHA256</code> ماك أو لينكس: <code>shasum -a 256 ملف.apk</code></p>
+    <p>وتوقيع التطبيق (شهادة المطوّر) لازم يكون:</p>
+    <code>e165eed1163bb3883e43e630360c3e83c8060bcb5f7de7a5975d60b1d0f65a15</code>
+    <p><small>بتشوفه بالأمر <span dir="ltr">apksigner verify --print-certs</span>. لو أي رقم مختلف، متثبتش الملف وابعتلنا.</small></p>
+  </div>
+
+  <div class="card">
+    <h2>3. التثبيت</h2>
+    <ol>
+      <li>افتح التحميل، وهيطلب منك السماح لمتصفحك بتثبيت التطبيقات. اسمح له <b>للمرة دي بس</b>.</li>
+      <li>لو ظهرت رسالة من Play Protect إن المطوّر غير معروف: ده متوقع لأن التطبيق مش على جوجل بلاي. اتأكد من البصمة فوق، وبعدين اختار "تثبيت على أي حال".</li>
+      <li>بعد التثبيت ارجع للإعدادات واقفل سماح التثبيت للمتصفح.</li>
+      <li>التحديثات: من النسخة 0.9.23 وطالع، التطبيق بيتأكد لوحده من وجود نسخة جديدة (من "عن حضوري"). بيحمّلها من GitHub الرسمي، ويتأكد من توقيع ملف التحديث وبصمة الملف وتوقيع التطبيق قبل ما يسمحلك تثبّتها. مفيش حاجة بتتثبت من غير ما تضغط.</li>
+      <li>لو هتثبت يدوي: نزّل النسخة الجديدة من هنا وثبّتها فوق القديمة. بيانات شركتك بتفضل زي ما هي.</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h2>التطبيق بيطلب إيه؟</h2>
+    <ul>
+      <li>الموقع والكاميرا: لبصمة الحضور بالـ GPS والسيلفي.</li>
+      <li>متابعة الموقع أثناء الشغل: اختيارية، المالك هو اللي يفعّلها، والموظف بيشوف إشعار ويوافق قبل ما تبدأ.</li>
+      <li>الإشعارات: لتنبيهات الحضور والطلبات.</li>
+      <li>تثبيت التحديثات: بتتطلب بس لما تختار تحدّث التطبيق من جواه، وأندرويد هو اللي بيعرض شاشة التثبيت.</li>
+    </ul>
+  </div>
+
+  <div class="card warn">
+    <h2>بصراحة</h2>
+    <ul>
+      <li>التطبيق لسه بيتجرب، ومجرّبش على كل أنواع الموبايلات.</li>
+      <li>لو وصلك رابط تحميل شكله مختلف عن ده، أو حد طلب منك فلوس أو بيانات لتحميله، متكملش وكلمنا على واتساب.</li>
+    </ul>
+    <p style="margin-top:10px"><a href="https://wa.me/201003381110">واتساب للإبلاغ أو المساعدة</a></p>
+  </div>
+</div>
+<script>
+fetch('../latest.json',{cache:'no-store'}).then(function(r){return r.json()}).then(function(m){
+ if(!m||!m.url||m.url.indexOf('https://github.com/zekom4167-hue/hodory/releases/download/')!==0||!/^[0-9a-f]{64}$/.test(m.sha256))return;
+ document.getElementById('dl').href=m.url;document.getElementById('ver').textContent=m.version;
+ document.getElementById('sha').textContent=m.sha256;document.getElementById('fname').textContent=m.url.split('/').pop();
+}).catch(function(){});
+</script>
+</body></html>
